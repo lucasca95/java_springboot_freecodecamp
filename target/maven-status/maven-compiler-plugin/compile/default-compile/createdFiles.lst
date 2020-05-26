@@ -1,2 +1,8 @@
 globhack/abrazar/controller/MainController.class
+globhack/abrazar/service/BookService.class
+globhack/abrazar/controller/book/BookController.class
+globhack/abrazar/entity/Order.class
 globhack/abrazar/AbrazarApplication.class
+globhack/abrazar/entity/User.class
+globhack/abrazar/entity/Book.class
+globhack/abrazar/repository/BookJpaRepository.class

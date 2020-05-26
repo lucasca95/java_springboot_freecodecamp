@@ -1,2 +1,8 @@
-/home/lucasca95/Documentos/develop/java_springboot_abrazar/src/main/java/globhack/abrazar/controller/MainController.java
-/home/lucasca95/Documentos/develop/java_springboot_abrazar/src/main/java/globhack/abrazar/AbrazarApplication.java
+/home/lucasca95/Documentos/develop/java_springboot_freecodecamp/src/main/java/globhack/abrazar/entity/User.java
+/home/lucasca95/Documentos/develop/java_springboot_freecodecamp/src/main/java/globhack/abrazar/entity/Book.java
+/home/lucasca95/Documentos/develop/java_springboot_freecodecamp/src/main/java/globhack/abrazar/controller/MainController.java
+/home/lucasca95/Documentos/develop/java_springboot_freecodecamp/src/main/java/globhack/abrazar/controller/book/BookController.java
+/home/lucasca95/Documentos/develop/java_springboot_freecodecamp/src/main/java/globhack/abrazar/AbrazarApplication.java
+/home/lucasca95/Documentos/develop/java_springboot_freecodecamp/src/main/java/globhack/abrazar/entity/Order.java
+/home/lucasca95/Documentos/develop/java_springboot_freecodecamp/src/main/java/globhack/abrazar/repository/BookJpaRepository.java
+/home/lucasca95/Documentos/develop/java_springboot_freecodecamp/src/main/java/globhack/abrazar/service/BookService.java

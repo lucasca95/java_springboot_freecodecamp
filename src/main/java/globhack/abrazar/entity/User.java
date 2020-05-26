@@ -1,25 +1,35 @@
 package globhack.abrazar.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 
 @Entity
-@Table(name = "user")
+@Table(name = "appuser")
 public class User {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "first_name")
+    @Column(name = "first_name", nullable = false)
+    @NotBlank
     private String firstName;
-    @Column(name = "last_name")
+    @Column(name = "last_name", nullable = false)
+    @NotBlank
     private String lastName;
-    @Column(name = "email")
+    @Column(name = "email", nullable = false, unique = true)
+    @NotBlank
+    @Email
     private String email;
-    @Column(name = "password")
+    @Column(name = "password", nullable = false)
+    @NotBlank
     private String password;
+    @Column(name = "type", nullable = false)
+    @NotBlank
+    private int type;
 
-    //#region Getters & Setters
+    //#region
     public int getId() {
         return id;
     }
@@ -59,18 +69,40 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
     //#endregion
 
-    //#region Constructors
-    public User(int id, String firstName, String lastName, String email, String password) {
+    public User() {
+    }
+
+    
+
+    public User(int id, @NotBlank String firstName, @NotBlank String lastName, @NotBlank @Email String email,
+            @NotBlank int type) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.type = type;
+    }
+
+    public User(int id, @NotBlank String firstName, @NotBlank String lastName, @NotBlank @Email String email,
+            @NotBlank String password, @NotBlank int type) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.type = type;
     }
-    public User() {
-    }
-    //#endregion
+    
+    
     
 }
